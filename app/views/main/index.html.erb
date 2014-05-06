@@ -1,0 +1,9 @@
+<h1>Products from Amazon Product Advertising API</h1>
+<% if @products.any? %>
+  <% @products.each do |product| %>
+    <div class="product">
+      <%= link_to image_tag(product.image_url), product.url %>
+      <%= link_to product.name, product.url %>
+    </div>
+  <% end %>
+<% end %>
